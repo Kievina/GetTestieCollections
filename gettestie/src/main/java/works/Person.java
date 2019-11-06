@@ -1,7 +1,7 @@
-package gettestie.src.main.java.rocks.zipcode;
+package works;
 
 
-public class Person {
+public class Person implements Comparable<Person> {
     private String name;
     private int yearOfBirth;
     private Address address;
@@ -13,7 +13,10 @@ public class Person {
         this.name = name;
         this.yearOfBirth = yearOfBirth;
     }
-
+    public int compareTo(Person p)
+    {
+        return this.yearOfBirth - p.yearOfBirth; // rank in ascending order (earliest to latest)
+    }
     /**
      * Set a new name for this person.
      */
